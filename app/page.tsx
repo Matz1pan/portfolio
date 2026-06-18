@@ -3,24 +3,33 @@ export default function Home() {
     <main>
 
       {/* NAV */}
-      <nav style={{ background: '#fff', borderBottom: '1px solid #F0EDED', padding: '16px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 100 }}>
-        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '20px' }}>MF</span>
-        <div style={{ display: 'flex', gap: '28px' }}>
-          {['Work', 'Services', 'Blog'].map(l => (
-            <a key={l} href="#" style={{ fontSize: '14px', color: '#888', textDecoration: 'none' }}>{l}</a>
-          ))}
+      <nav style={{ background: '#fff', borderBottom: '1px solid #F0EDED', padding: '14px clamp(20px, 5vw, 40px)', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: '16px', position: 'sticky', top: 0, zIndex: 100 }}>
+        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '20px', justifySelf: 'start' }}>MF</span>
+        <div style={{ display: 'flex', gap: 'clamp(16px, 4vw, 28px)', justifySelf: 'center' }}>
+          <a href="/work" style={{ fontSize: '14px', color: '#555', textDecoration: 'none', whiteSpace: 'nowrap' }}>Work</a>
+          <a href="#leistungen" style={{ fontSize: '14px', color: '#555', textDecoration: 'none', whiteSpace: 'nowrap' }}>Leistungen</a>
+          <a href="#kontakt" style={{ fontSize: '14px', color: '#555', textDecoration: 'none', whiteSpace: 'nowrap' }}>Kontakt</a>
         </div>
-        <a href="#kontakt" style={{ background: '#111', color: '#fff', padding: '8px 18px', borderRadius: '3px', fontSize: '13px', textDecoration: 'none' }}>Kontakt</a>
+        <span />
       </nav>
 
       {/* HERO – Rot */}
-      <section style={{ background: 'var(--color-red)', padding: '88px 40px 76px' }}>
-        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: '24px' }}>
+      <section style={{ background: 'var(--color-red)', padding: 'clamp(56px, 10vw, 88px) clamp(20px, 5vw, 40px) clamp(48px, 8vw, 76px)' }}>
+        <p style={{ fontSize: 'clamp(10px, 2.5vw, 11px)', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: '20px' }}>
           · Marketing · Content · Digital
         </p>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(52px, 8vw, 104px)', lineHeight: 0.9, color: '#fff', margin: 0 }}>MATTHIAS</h1>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(52px, 8vw, 104px)', lineHeight: 0.9, color: 'var(--color-yellow)', marginBottom: '32px' }}>FRIETHOFF</h1>
-        <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: '460px', marginBottom: '36px' }}>
+
+        {/* Name als SVG: skaliert immer, bricht nie um, wird nie abgeschnitten */}
+        <div style={{ maxWidth: '780px', width: '100%', marginBottom: '32px' }}>
+          <svg viewBox="0 0 1000 300" width="100%" style={{ display: 'block', overflow: 'visible' }} role="img" aria-label="Matthias Friethoff">
+            <text x="0" y="128" textLength="1000" lengthAdjust="spacingAndGlyphs"
+              fontFamily="'Syne', sans-serif" fontWeight="800" fontSize="150" fill="#ffffff">MATTHIAS</text>
+            <text x="0" y="285" textLength="1000" lengthAdjust="spacingAndGlyphs"
+              fontFamily="'Syne', sans-serif" fontWeight="800" fontSize="150" fill="#F5C400">FRIETHOFF</text>
+          </svg>
+        </div>
+
+        <p style={{ fontSize: 'clamp(15px, 4vw, 17px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: '460px', marginBottom: '36px' }}>
           Marketing aus einer Hand. Von der Idee über Design und Strategie zu deinem Ziel.
         </p>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -33,8 +42,8 @@ export default function Home() {
       <div style={{ height: '5px', background: 'var(--color-sky)' }} />
 
       {/* LEISTUNGEN – Weiß */}
-      <section style={{ padding: '72px 40px', background: '#fff' }}>
-        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 52px)', marginBottom: '48px' }}>Was ich mache</h2>
+      <section id="leistungen" style={{ padding: 'clamp(48px, 8vw, 72px) clamp(20px, 5vw, 40px)', background: '#fff' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(30px, 6vw, 52px)', marginBottom: '48px' }}>Was ich mache</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '40px' }}>
           {[
             { t: 'Bewegtbild & Content', d: 'Video, Foto, Podcast, Studio. Ich habe YouTube-Kanäle mit aufgebaut und ganze Studios inklusive Workflows von Null aufgesetzt. Von der Planung bis zum fertigen Schnitt.' },
@@ -51,8 +60,8 @@ export default function Home() {
       </section>
 
       {/* FOKUS-BOX – Schwarz */}
-      <section style={{ background: 'var(--color-ink)', padding: '72px 40px' }}>
-        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(28px, 4vw, 44px)', color: '#fff', marginBottom: '24px' }}>
+      <section style={{ background: 'var(--color-ink)', padding: 'clamp(48px, 8vw, 72px) clamp(20px, 5vw, 40px)' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(26px, 5vw, 44px)', color: '#fff', marginBottom: '24px' }}>
           Mal Überblick, <span style={{ color: 'var(--color-yellow)' }}>mal Tiefe.</span>
         </h2>
         <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.75, maxWidth: '640px', marginBottom: '32px' }}>
@@ -65,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* PROJEKTE – Weiß */}
-      <section id="work" style={{ padding: '72px 40px', background: '#fff' }}>
+      <section id="work" style={{ padding: 'clamp(48px, 8vw, 72px) clamp(20px, 5vw, 40px)', background: '#fff' }}>
         <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '32px' }}>Ausgewählte Projekte</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
           {[
@@ -89,9 +98,9 @@ export default function Home() {
       </section>
 
       {/* KONTAKT-CTA – Rot */}
-      <section id="kontakt" style={{ background: 'var(--color-red)', padding: '88px 40px' }}>
-        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(40px, 6vw, 72px)', color: '#fff', marginBottom: '20px' }}>Lass uns reden.</h2>
-        <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: '500px', marginBottom: '32px' }}>
+      <section id="kontakt" style={{ background: 'var(--color-red)', padding: 'clamp(56px, 9vw, 88px) clamp(20px, 5vw, 40px)' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', color: '#fff', marginBottom: '20px' }}>Lass uns reden.</h2>
+        <p style={{ fontSize: 'clamp(15px, 4vw, 17px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, maxWidth: '500px', marginBottom: '32px' }}>
           Egal ob feste Stelle, Projekt oder freie Zusammenarbeit. Wenn du jemanden suchst, der Marketing kreativ und strategisch denkt, schreib mir.
         </p>
         <a href="mailto:matze.diedrichs@gmail.com" style={{ background: '#fff', color: 'var(--color-red)', padding: '14px 28px', borderRadius: '3px', fontSize: '15px', fontWeight: 500, textDecoration: 'none' }}>Kontakt aufnehmen →</a>

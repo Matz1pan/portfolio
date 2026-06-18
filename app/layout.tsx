@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import NoirToggle from "./NoirToggle";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,14 +34,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <body>
+        <NoirToggle />
+
         {children}
 
         {/* FOOTER */}
-        <footer style={{ background: "#111", color: "#fff", padding: "48px 40px" }}>
+        <footer style={{ background: "#111", color: "#fff", padding: "48px clamp(20px, 5vw, 40px)" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", justifyContent: "space-between", alignItems: "center" }}>
             <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "22px" }}>MF</span>
             <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
               <Link href="/" style={{ fontSize: "14px", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Start</Link>
+              <Link href="/work" style={{ fontSize: "14px", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Work</Link>
               <Link href="/impressum" style={{ fontSize: "14px", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Impressum</Link>
               <Link href="/datenschutz" style={{ fontSize: "14px", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Datenschutz</Link>
             </div>
