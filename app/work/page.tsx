@@ -33,6 +33,78 @@ const ITEMS: Item[] = [
     client: "Doorbird", team: "Solo", role: "Animation, Schnitt, Kameraarbeit, vor der Kamera",
     task: "Schritt für Schritt durch ein komplexes technisches Thema führen und so das Support-Team spürbar entlasten.",
   },
+  {
+    type: "video", id: "ledab-legenden-traktor", youtubeId: "_1GUxKEN9b0",
+    title: "Legenden-Traktor", year: 2025, tags: ["Infomercial", "Landmaschinen"],
+    client: "LEDAB GmbH", team: "Solo", role: "Kamera, Schnitt",
+    task: "Infomercial für LEDAB, das einen legendären Traktor und die passende Landmaschinentechnik in Szene setzt.",
+  },
+  {
+    type: "video", id: "ledab-umbau-tutorial", youtubeId: "KAQgphx258A",
+    title: "Umbau-Tutorial Lenksystem", year: 2025, tags: ["Tutorial", "Infomercial", "Landmaschinen"],
+    client: "LEDAB GmbH", team: "Solo", role: "Kamera, Schnitt",
+    task: "Umbau-Tutorial als Infomercial, im Rahmen einer Aktion zur Verkaufsförderung für Lenksystem-Nachrüstungen an Mähdreschern.",
+  },
+  {
+    type: "video", id: "messereportage", youtubeId: "JJRiWu24R24",
+    title: "Messereportage", year: 2024, tags: ["Reportage", "Vlog"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Reportage von einer Messe, eingefangen als Vlog.",
+  },
+  {
+    type: "video", id: "factory-tour", youtubeId: "LA2hoFEMARM",
+    title: "Factory Tour", year: 2024, tags: ["Corporate", "Factory Tour"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Ein Rundgang durch die Produktion, der Fertigung und Abläufe greifbar macht.",
+  },
+  {
+    type: "video", id: "tutorial-talkinghead", youtubeId: "K_BBKeH_9Co",
+    title: "Tutorial", year: 2023, tags: ["Tutorial", "Talking Head"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt, vor der Kamera",
+    task: "Ein Tutorial, das ein Thema verständlich vor der Kamera vermittelt.",
+  },
+  {
+    type: "video", id: "dreambuild-mood", youtubeId: "TQkDbp7x_98",
+    title: "Dreambuild", year: 2023, tags: ["Dreambuild", "Mood"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Ein stimmungsvolles Moodvideo rund um einen Dreambuild.",
+  },
+  {
+    type: "video", id: "bikepacking-vlog", youtubeId: "bTqVghiynrA",
+    title: "Bikepacking", year: 2023, tags: ["Vlog", "Adventure"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Ein Adventure-Vlog von einer Bikepacking-Tour.",
+  },
+  {
+    type: "video", id: "trickshot-dreambuild", youtubeId: "j2yiecwGF7I",
+    title: "Trickshot", year: 2023, tags: ["Trickshot", "Dreambuild"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Ein Trickshot-Video rund um einen Dreambuild.",
+  },
+  {
+    type: "video", id: "bikeporn-ironic", youtubeId: "_7R9RrLcjG0",
+    title: "Bikeporn", year: 2023, tags: ["Bikeporn", "Ironic"],
+    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    task: "Ein ironisch überzeichnetes Bike-Video im Bikeporn-Stil.",
+  },
+  {
+    type: "video", id: "fluter-doku", youtubeId: "A2WNv8QTEec",
+    title: "Büchsenmacher (Doku)", year: 2022, tags: ["Doku", "Reportage"],
+    client: "fluter Magazin", team: "Solo", role: "Kamera, Schnitt",
+    task: "Dokumentarischer Beitrag für das fluter Magazin.",
+  },
+  {
+    type: "video", id: "ravenol-reportage", youtubeId: "IX5kitxrRZA",
+    title: "Reportage für Ravenol", year: 2022, tags: ["Reportage", "Corporate"],
+    client: "Ravenol", team: "Als Freelancer", role: "Kamera, Schnitt",
+    task: "Reportage für Ravenol, umgesetzt als freier Mitarbeiter.",
+  },
+  {
+    type: "video", id: "lebensbaum-kinospot", youtubeId: "dgztsFZz3O0",
+    title: "Kino-Werbespot Lebensbaum", year: 2022, tags: ["Werbespot", "Kino"],
+    client: "Lebensbaum", team: "Für Hirschmeier Media", role: "Kamera",
+    task: "Kino-Werbespot für Lebensbaum, produziert für Hirschmeier Media.",
+  },
 ];
 // =======================================================================
 
@@ -178,8 +250,7 @@ export default function WorkPage() {
                         <iframe src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId}&modestbranding=1&playsinline=1`}
                           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none", pointerEvents: "none", objectFit: "cover" }} allow="autoplay" />
                       ) : (
-                        <img src={`https://i.ytimg.com/vi/${item.youtubeId}/maxresdefault.jpg`}
-                          onError={(e) => { e.currentTarget.src = `https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`; }}
+                        <img src={`https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`}
                           alt={item.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
                       )
                     )}
