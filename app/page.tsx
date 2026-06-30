@@ -4,11 +4,6 @@ export default function Home() {
   return (
     <main>
 
-      {/* HINWEIS-BANNER: Seite im Aufbau */}
-      <div style={{ background: '#111', color: '#fff', padding: '9px clamp(20px, 5vw, 40px)', fontSize: '13px', textAlign: 'center', lineHeight: 1.5 }}>
-        <span style={{ color: 'var(--color-yellow)', fontWeight: 600 }}>In Arbeit:</span> Diese Seite ist ein laufendes Projekt und wird gerade aufgebaut. Inhalte und Funktionen wachsen Schritt für Schritt.
-      </div>
-
       {/* NAV */}
       <nav style={{ background: '#fff', borderBottom: '1px solid #F0EDED', padding: '14px clamp(20px, 5vw, 40px)', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: '16px', position: 'sticky', top: 0, zIndex: 100 }}>
         <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '20px', justifySelf: 'start' }}>MF</span>
@@ -19,6 +14,18 @@ export default function Home() {
         </div>
         <span />
       </nav>
+
+      {/* HINWEIS-BANNER: Seite im Aufbau, unter dem Menü */}
+      <div style={{ display: 'flex', alignItems: 'stretch', background: '#111', minHeight: '52px' }}>
+        <div style={{ width: 'clamp(48px, 10vw, 96px)', flexShrink: 0, backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 8px, #111 8px, #111 16px)' }} />
+        <div style={{ flex: 1, padding: '12px clamp(14px, 3vw, 28px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', textAlign: 'center' }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(15px, 2.4vw, 19px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-yellow)', whiteSpace: 'nowrap' }}>In Arbeit</span>
+          <span style={{ fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
+            Diese Seite ist ein laufendes Projekt und wird gerade aufgebaut. Inhalte und Funktionen wachsen Schritt für Schritt.
+          </span>
+        </div>
+        <div style={{ width: 'clamp(48px, 10vw, 96px)', flexShrink: 0, backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 8px, #111 8px, #111 16px)' }} />
+      </div>
 
       {/* HERO – Rot */}
       <section style={{ background: 'var(--color-red)', padding: 'clamp(56px, 10vw, 88px) clamp(20px, 5vw, 40px) clamp(48px, 8vw, 76px)' }}>
