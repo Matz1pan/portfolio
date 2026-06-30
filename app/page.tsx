@@ -1,6 +1,13 @@
+import NoirToggle from "./NoirToggle";
+
 export default function Home() {
   return (
     <main>
+
+      {/* HINWEIS-BANNER: Seite im Aufbau */}
+      <div style={{ background: '#111', color: '#fff', padding: '9px clamp(20px, 5vw, 40px)', fontSize: '13px', textAlign: 'center', lineHeight: 1.5 }}>
+        <span style={{ color: 'var(--color-yellow)', fontWeight: 600 }}>In Arbeit:</span> Diese Seite ist ein laufendes Projekt und wird gerade aufgebaut. Inhalte und Funktionen wachsen Schritt für Schritt.
+      </div>
 
       {/* NAV */}
       <nav style={{ background: '#fff', borderBottom: '1px solid #F0EDED', padding: '14px clamp(20px, 5vw, 40px)', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: '16px', position: 'sticky', top: 0, zIndex: 100 }}>
@@ -94,6 +101,9 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+        <div style={{ marginTop: '32px' }}>
+          <a href="/work" style={{ background: 'var(--color-red)', color: '#fff', padding: '13px 26px', borderRadius: '3px', fontSize: '14px', fontWeight: 500, textDecoration: 'none', display: 'inline-block' }}>Zum vollständigen Portfolio →</a>
         </div>
       </section>
 
