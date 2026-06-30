@@ -30,67 +30,79 @@ const ITEMS: Item[] = [
   {
     type: "video", id: "doorbird-sip-fritzbox", youtubeId: "32ufvvYuUk4",
     title: "SIP-Integration mit einer FRITZ!Box am Beispiel des FRITZ!Fon C5", year: 2021, tags: ["Corporate", "Erklärfilm", "Tutorial", "Talking Head"],
-    client: "Doorbird", team: "Solo", role: "Animation, Schnitt, Kameraarbeit, vor der Kamera",
+    client: "Doorbird", team: "", role: "Animation, Schnitt, Kameraarbeit, vor der Kamera",
     task: "Schritt für Schritt durch ein komplexes technisches Thema führen und so das Support-Team spürbar entlasten.",
   },
   {
     type: "video", id: "ledab-legenden-traktor", youtubeId: "_1GUxKEN9b0",
     title: "Legenden-Traktor", year: 2025, tags: ["Infomercial", "Landmaschinen"],
-    client: "LEDAB GmbH", team: "Solo", role: "Kamera, Schnitt",
+    client: "LEDAB GmbH", team: "", role: "Kamera, Schnitt",
     task: "Infomercial für LEDAB, das einen legendären Traktor und die passende Landmaschinentechnik in Szene setzt.",
   },
   {
     type: "video", id: "ledab-umbau-tutorial", youtubeId: "KAQgphx258A",
     title: "Umbau-Tutorial Lenksystem", year: 2025, tags: ["Tutorial", "Infomercial", "Landmaschinen"],
-    client: "LEDAB GmbH", team: "Solo", role: "Kamera, Schnitt",
+    client: "LEDAB GmbH", team: "", role: "Kamera, Schnitt",
     task: "Umbau-Tutorial als Infomercial, im Rahmen einer Aktion zur Verkaufsförderung für Lenksystem-Nachrüstungen an Mähdreschern.",
+  },
+  {
+    type: "video", id: "eyb-reisedoku-teil1", youtubeId: "VdYnlaH920g",
+    title: "Reisedoku Teil 1", year: 2022, tags: ["Vlog", "Adventure"],
+    client: "EYB", team: "", role: "Kamera, Schnitt",
+    task: "Erster Teil einer siebenteiligen Reisedokumentation für EYB.",
+  },
+  {
+    type: "video", id: "hirschmeier-moderatoren-battle", youtubeId: "mccxZer0aMU",
+    title: "Teaser Moderatoren-Battle am Nürburgring", year: 2019, tags: ["Werbespot", "Reportage", "Studio"],
+    client: "Hirschmeier Media", team: "", role: "Kamera, Schnitt",
+    task: "Teaser für ein Moderatoren-Battle beim 24-Stunden-Rennen am Nürburgring.",
   },
   {
     type: "video", id: "messereportage", youtubeId: "JJRiWu24R24",
     title: "Messereportage", year: 2024, tags: ["Reportage", "Vlog"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Reportage von einer Messe, eingefangen als Vlog.",
   },
   {
     type: "video", id: "factory-tour", youtubeId: "LA2hoFEMARM",
     title: "Factory Tour", year: 2024, tags: ["Corporate", "Factory Tour"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Ein Rundgang durch die Produktion, der Fertigung und Abläufe greifbar macht.",
   },
   {
     type: "video", id: "tutorial-talkinghead", youtubeId: "K_BBKeH_9Co",
     title: "Tutorial", year: 2023, tags: ["Tutorial", "Talking Head"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt, vor der Kamera",
+    client: "?", team: "", role: "Kamera, Schnitt, vor der Kamera",
     task: "Ein Tutorial, das ein Thema verständlich vor der Kamera vermittelt.",
   },
   {
     type: "video", id: "dreambuild-mood", youtubeId: "TQkDbp7x_98",
     title: "Dreambuild", year: 2023, tags: ["Dreambuild", "Mood"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Ein stimmungsvolles Moodvideo rund um einen Dreambuild.",
   },
   {
     type: "video", id: "bikepacking-vlog", youtubeId: "bTqVghiynrA",
     title: "Bikepacking", year: 2023, tags: ["Vlog", "Adventure"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Ein Adventure-Vlog von einer Bikepacking-Tour.",
   },
   {
     type: "video", id: "trickshot-dreambuild", youtubeId: "j2yiecwGF7I",
     title: "Trickshot", year: 2023, tags: ["Trickshot", "Dreambuild"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Ein Trickshot-Video rund um einen Dreambuild.",
   },
   {
     type: "video", id: "bikeporn-ironic", youtubeId: "_7R9RrLcjG0",
     title: "Bikeporn", year: 2023, tags: ["Bikeporn", "Ironic"],
-    client: "?", team: "Solo", role: "Kamera, Schnitt",
+    client: "?", team: "", role: "Kamera, Schnitt",
     task: "Ein ironisch überzeichnetes Bike-Video im Bikeporn-Stil.",
   },
   {
     type: "video", id: "fluter-doku", youtubeId: "A2WNv8QTEec",
-    title: "Büchsenmacher (Doku)", year: 2022, tags: ["Doku", "Reportage"],
-    client: "fluter Magazin", team: "Solo", role: "Kamera, Schnitt",
+    title: "Büchsenmacher (Doku)", year: 2015, tags: ["Doku", "Reportage"],
+    client: "fluter Magazin", team: "", role: "Kamera, Schnitt",
     task: "Dokumentarischer Beitrag für das fluter Magazin.",
   },
   {
@@ -113,6 +125,7 @@ const PAGE_PAD = "32px";
 const TYPE_LABEL: Record<Item["type"], string> = { video: "Video", photo: "Foto", project: "Projekt" };
 const TYPE_FILTERS: Item["type"][] = ["video", "photo", "project"];
 const THEME_TAGS = Array.from(new Set(ITEMS.flatMap((i) => i.tags))).sort();
+const TYPES_PRESENT = new Set(ITEMS.map((i) => i.type));
 
 const PROJECT_COLORS = {
   red:    { bg: "var(--color-red)",    text: "#fff", metric: "var(--color-yellow)" },
@@ -129,8 +142,9 @@ function searchBlob(i: Item): string {
 export default function WorkPage() {
   const [query, setQuery] = useState("");
   const [activeType, setActiveType] = useState<Item["type"] | null>(null);
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [activeTags, setActiveTags] = useState<string[]>([]);
   const [showTags, setShowTags] = useState(false);
+  const [sort, setSort] = useState<"default" | "az" | "date">("default");
   const [hovered, setHovered] = useState<string | null>(null);
   const [slide, setSlide] = useState(0);
   const [open, setOpen] = useState<Item | null>(null);
@@ -147,17 +161,23 @@ export default function WorkPage() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return ITEMS.filter((i) => {
+    let arr = ITEMS.filter((i) => {
       if (activeType && i.type !== activeType) return false;
-      if (activeTag && !i.tags.includes(activeTag)) return false;
+      if (activeTags.length > 0 && !activeTags.some((t) => i.tags.includes(t))) return false;
       if (q && !searchBlob(i).includes(q)) return false;
       return true;
     });
-  }, [query, activeType, activeTag]);
+    if (sort === "az") arr = [...arr].sort((a, b) => a.title.localeCompare(b.title, "de"));
+    else if (sort === "date") arr = [...arr].sort((a, b) => b.year - a.year);
+    return arr;
+  }, [query, activeType, activeTags, sort]);
+
+  const toggleTag = (tag: string) =>
+    setActiveTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
 
   const openItem = (item: Item) => { setGalleryIndex(0); setOpen(item); };
-  const resetAll = () => { setQuery(""); setActiveType(null); setActiveTag(null); };
-  const filtersActive = Boolean(query || activeType || activeTag);
+  const resetAll = () => { setQuery(""); setActiveType(null); setActiveTags([]); };
+  const filtersActive = Boolean(query || activeType || activeTags.length > 0);
 
   return (
     <main style={{ background: "var(--color-red)", minHeight: "100vh" }}>
@@ -177,7 +197,7 @@ export default function WorkPage() {
       {/* STEUERLEISTE */}
       <section style={{ padding: `0 ${PAGE_PAD} 20px` }}>
         <div style={{ background: "var(--color-sky)", borderRadius: "6px", padding: "12px", display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
-          <div style={{ position: "relative", flex: "1 1 240px", minWidth: "200px" }}>
+          <div style={{ position: "relative", flex: "1 1 220px", minWidth: "180px" }}>
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -190,14 +210,24 @@ export default function WorkPage() {
           </div>
 
           {[{ key: null, label: "Alle" }, ...TYPE_FILTERS.map((t) => ({ key: t, label: TYPE_LABEL[t] }))].map(({ key, label }) => {
+            const disabled = key !== null && !TYPES_PRESENT.has(key as Item["type"]);
             const active = activeType === key;
             return (
-              <button key={label} onClick={() => setActiveType(key as Item["type"] | null)}
-                style={{ fontFamily: "var(--font-body)", fontSize: "13px", fontWeight: 500, padding: "8px 15px", borderRadius: "4px", cursor: "pointer", border: "none", background: active ? "#111" : "rgba(255,255,255,0.92)", color: active ? "#fff" : "#111", transition: "all 0.15s" }}>
+              <button key={label} onClick={() => !disabled && setActiveType(key as Item["type"] | null)}
+                disabled={disabled}
+                style={{ fontFamily: "var(--font-body)", fontSize: "13px", fontWeight: 500, padding: "8px 15px", borderRadius: "4px", cursor: disabled ? "not-allowed" : "pointer", border: "none", background: active ? "#111" : "rgba(255,255,255,0.92)", color: active ? "#fff" : "#111", opacity: disabled ? 0.4 : 1, transition: "all 0.15s" }}>
                 {label}
               </button>
             );
           })}
+
+          {/* Sortierung */}
+          <select value={sort} onChange={(e) => setSort(e.target.value as "default" | "az" | "date")}
+            style={{ fontFamily: "var(--font-body)", fontSize: "13px", fontWeight: 500, padding: "8px 12px", borderRadius: "4px", border: "none", background: "rgba(255,255,255,0.92)", color: "#111", cursor: "pointer" }}>
+            <option value="default">Sortierung</option>
+            <option value="az">A bis Z</option>
+            <option value="date">Neueste zuerst</option>
+          </select>
 
           <button onClick={() => setShowTags((s) => !s)}
             style={{ fontFamily: "var(--font-body)", fontSize: "13px", fontWeight: 500, padding: "8px 15px", borderRadius: "4px", cursor: "pointer", border: "none", background: showTags ? "#111" : "rgba(255,255,255,0.92)", color: showTags ? "#fff" : "#111", transition: "all 0.15s" }}>
@@ -215,9 +245,9 @@ export default function WorkPage() {
               style={{ overflow: "hidden" }}>
               <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", padding: "14px 2px 0" }}>
                 {THEME_TAGS.map((tag) => {
-                  const active = activeTag === tag;
+                  const active = activeTags.includes(tag);
                   return (
-                    <button key={tag} onClick={() => setActiveTag(active ? null : tag)}
+                    <button key={tag} onClick={() => toggleTag(tag)}
                       style={{ fontFamily: "var(--font-body)", fontSize: "12px", fontWeight: 500, padding: "6px 13px", borderRadius: "20px", cursor: "pointer", border: "1px solid", borderColor: active ? "#fff" : "rgba(255,255,255,0.4)", background: active ? "#fff" : "transparent", color: active ? "#111" : "#fff", transition: "all 0.15s" }}>
                       {tag}
                     </button>
@@ -234,24 +264,25 @@ export default function WorkPage() {
         {filtered.length === 0 ? (
           <p style={{ color: "#fff", fontSize: "15px", padding: "40px 0" }}>Nichts gefunden. Versuch einen anderen Begriff oder setze die Filter zurück.</p>
         ) : (
-          <motion.div layout style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 0, borderRadius: "6px", overflow: "hidden" }}>
+          <motion.div layout style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 0 }}>
             <AnimatePresence mode="popLayout">
               {filtered.map((item) => (
                 <motion.div key={item.id} layout
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  whileHover={{ scale: 1.05, rotate: [0, -2.2, 1.6, -1.1, 0.6, 0], transition: { duration: 0.55, ease: "easeOut" } }}
                   onMouseEnter={() => setHovered(item.id)} onMouseLeave={() => setHovered(null)}
                   onClick={() => openItem(item)}
-                  style={{ cursor: "pointer", position: "relative", overflow: "hidden", background: "#111", aspectRatio: "1 / 1" }}>
+                  style={{ cursor: "pointer", position: "relative", overflow: "hidden", background: "#111", aspectRatio: "1 / 1", zIndex: hovered === item.id ? 5 : 1, transformOrigin: "center" }}>
 
-                  <div style={{ position: "absolute", inset: 0 }}>
+                  <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
                     {item.type === "video" && (
                       hovered === item.id ? (
                         <iframe src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId}&modestbranding=1&playsinline=1`}
-                          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none", pointerEvents: "none", objectFit: "cover" }} allow="autoplay" />
+                          style={{ position: "absolute", top: "50%", left: "50%", width: "177.78%", height: "100%", transform: "translate(-50%, -50%)", border: "none", pointerEvents: "none" }} allow="autoplay" />
                       ) : (
                         <img src={`https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`}
-                          alt={item.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                          alt={item.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.34)" }} />
                       )
                     )}
                     {item.type === "photo" && (
@@ -374,7 +405,7 @@ export default function WorkPage() {
                       { label: "Für wen", value: open.client },
                       { label: "Mit wem", value: open.team },
                       { label: "Mein Anteil", value: open.role },
-                    ].map((d) => (
+                    ].filter((d) => d.value && d.value !== "?").map((d) => (
                       <div key={d.label}>
                         <p style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-sky)", margin: "0 0 3px" }}>{d.label}</p>
                         <p style={{ fontSize: "14px", color: "#111", margin: 0, lineHeight: 1.5 }}>{d.value}</p>
